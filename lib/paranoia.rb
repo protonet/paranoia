@@ -104,10 +104,10 @@ module Paranoia
   end
   alias :restore :restore!
 
-  def paranoia_destroyed?
+  def destroyed?
     send(paranoia_column) != paranoia_sentinel_value
   end
-  alias :deleted? :paranoia_destroyed?
+  alias :deleted? :destroyed?
 
   private
 
